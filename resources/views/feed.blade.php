@@ -8,9 +8,7 @@
 
 @section('content')
 <div class="col-sm-12">
-
-    @foreach($cerveja as $c)
-    <div class="row">
+        @foreach($cerveja as $c)
         <div class="col-sm-12 col-md-4">
             <div class="box box-warning">
                 <div class="box-body box-profile">
@@ -59,7 +57,6 @@
             </div>
             @endforeach
             @foreach($posts as $post)
-            <div class="row">
                 <div class="col-md-6">
                     <!-- Box Comment -->
                     <div class="box box-widget">
@@ -108,9 +105,7 @@
     </div>
     <!-- /.box -->
 </div>
-</div>
 @endforeach
-</div>
 @stop
 @section('js')
 <script>

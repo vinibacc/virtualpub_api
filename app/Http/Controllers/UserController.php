@@ -284,7 +284,7 @@ class UserController extends Controller
         
     }
     public function pesq(Request $request) {
-        $dados = User::where('name', 'like','%'.$request->palavra.'%')->paginate(2);
+        $dados = User::where('name', 'like','%'.$request->palavra.'%')->paginate(4);
 
         return view('busca.user', ['users' => $dados,
                          'palavra' => $request->palavra]);

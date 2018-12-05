@@ -43,19 +43,19 @@
             }
             @endphp
 
-<p>{{$post->desc}}</p>
-@include('laravelLikeComment::like', ['like_item_id' => $post->id])
-</div>
+            <p>{{$post->desc}}</p>
+            @include('laravelLikeComment::like', ['like_item_id' => $post->id])
+        </div>
 
-<div class="box-box-comments ">
-    <a class="btn btn-primary" role="button" target="_blank" href="{{route('posts.show', $post->id)}}">visualiza comentários</a>
-</div>
+        <div class="box-box-comments ">
+            <a class="btn btn-primary" role="button" target="_blank" href="{{route('posts.show', $post->id)}}">visualiza comentários</a>
+        </div>
 
-<div class="box-footer"></div>
+        <div class="box-footer"></div>
 
-</div>
+        </div>
 <!-- /.box -->
-</div>
+    </div>
 @endforeach
 </div>
 @stop

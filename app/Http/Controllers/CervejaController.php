@@ -528,9 +528,9 @@ class CervejaController extends Controller
             }
             
             $cervejas = Array( 
-                Cerveja::where('ativo', 1)->where('estilo_id', $id1)->inRandomOrder()->get(),
-                Cerveja::where('ativo', 1)->where('estilo_id', $id2)->inRandomOrder()->get(),
-                Cerveja::where('ativo', 1)->where('estilo_id', $id3)->inRandomOrder()->get()
+                Cerveja::where('ativo', 1)->where('estilo_id', $id1)->inRandomOrder()->find(),
+                Cerveja::where('ativo', 1)->where('estilo_id', $id2)->inRandomOrder()->find(),
+                Cerveja::where('ativo', 1)->where('estilo_id', $id3)->inRandomOrder()->find()
             );
             
 

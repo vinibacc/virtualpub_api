@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\DB;
 use App\Post;
 use App\User;
 use App\Estilo;
+use App\Cerveja;
 use Gate;
 
 class PostController extends Controller

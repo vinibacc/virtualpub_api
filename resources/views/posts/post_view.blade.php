@@ -47,6 +47,7 @@
                                               
                         <!-- /.box-comment -->
                       </div>
+                      <div class="box-footer"></div>
                       <!-- /.box-footer -->
                       
                       <!-- /.box-footer -->

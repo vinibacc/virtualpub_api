@@ -136,11 +136,12 @@
               @include('laravelLikeComment::like', ['like_item_id' => $post->id])
             </div>
             <!-- /.box-body -->
-            <div class="box-footer box-comments">
+            <div class="box-footer box-comment">
                 <a class="btn btn-primary" role="button" target="_blank" href="{{route('posts.show', $post->id)}}">visualiza comentários</a>
                 
               
             </div>
+            <div class="box-footer"></div>
             
             <!-- /.box-footer -->
           </div>

@@ -33,7 +33,7 @@ function dfs($comments, $comment){
             @endif
         </a>
         <div class="content">
-            <a class="author" url="{{ $comment->url or '' }}"> {{ $comment->name }} </a>
+            <a class="author" url="{{ route('profile.show',$comment->id) }}"> {{ $comment->name }} </a>
             <div class="metadata">
                 <span class="date">{{ $comment->updated_at->diffForHumans() }}</span>
             </div>

@@ -7,9 +7,10 @@
 @stop
 
 @section('content')
-<div class="row">
+
+<div class="row col-sm-12 col-md-8">
     @foreach($posts as $post)
-        <div class="col-sm-12 col-md-8">
+        <div class="col-sm-12">
             <!-- Box Comment -->
             <div class="box box-widget">
                 <div class="box-header with-border">
@@ -31,31 +32,30 @@
                             <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
                         </div>
                     </div>
-                    
-                    <div class="box-body">
+                </div>  
+                <div class="box-body">
                         @php
-            if (file_exists(public_path('postimages/'.$post->id.'.jpg'))) {
-                $foto = '../postimages/'.$post->id.'.jpg';
-                echo "<center><img class='img-responsive pad' src='$foto' alt='Photo'></center>";
-            } else {
-                echo "";
-            }
-            @endphp
+                        if (file_exists(public_path('postimages/'.$post->id.'.jpg'))) {
+                            $foto = '../postimages/'.$post->id.'.jpg';
+                            echo "<center><img class='img-responsive pad' src='$foto' alt='Photo'></center>";
+                        } else {
+                            echo "";
+                        }
+                        @endphp
 
-<p>{{$post->desc}}</p>
-@include('laravelLikeComment::like', ['like_item_id' => $post->id])
-</div>
+                        <p>{{$post->desc}}</p>
+                        @include('laravelLikeComment::like', ['like_item_id' => $post->id])
+                </div>
 
-<div class="box-box-comments ">
-    <a class="btn btn-primary" role="button" target="_blank" href="{{route('posts.show', $post->id)}}">visualiza comentários</a>
-</div>
+                <div class="box-box-comments ">
+                    <a class="btn btn-primary" role="button" target="_blank" href="{{route('posts.show', $post->id)}}">visualiza comentários</a>
+                </div>
 
-<div class="box-footer"></div>
+                <div class="box-footer"></div>
 
-</div>
-<!-- /.box -->
-</div>
-@endforeach
+            </div>
+        </div>
+    @endforeach
 </div>
 @stop
 @section('js')

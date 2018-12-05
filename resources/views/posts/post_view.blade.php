@@ -39,11 +39,11 @@
                         @endphp
           
                         <p>{{$reg->description}}</p>
-                        @include('laravelLikeComment::like', ['like_item_id' => $post->id])
+                        @include('laravelLikeComment::like', ['like_item_id' => $reg->id])
                       </div>
                       <!-- /.box-body -->
                       <div class="box-footer box-comments">
-                          @include('laravelLikeComment::comment', ['comment_item_id' => $post->id])
+                          @include('laravelLikeComment::comment', ['comment_item_id' => $reg->id])
                                               
                         <!-- /.box-comment -->
                       </div>

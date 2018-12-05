@@ -137,14 +137,11 @@
             </div>
             <!-- /.box-body -->
             <div class="box-footer box-comments">
-              @include('laravelLikeComment::comment', ['comment_item_id' => $post->id])
+                <a class="btn btn-primary" role="button" target="_blank" href="{{route('posts.show', $post->id)}}">visualiza comentários</a>
                 
               
             </div>
-            <!-- /.box-footer -->
-            <div class="box-footer">
-             
-            </div>
+            
             <!-- /.box-footer -->
           </div>
           <!-- /.box -->

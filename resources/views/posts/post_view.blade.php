@@ -39,51 +39,16 @@
                         @endphp
           
                         <p>{{$reg->description}}</p>
-                        <button type="button" class="btn btn-default btn-xs"><i class="fa fa-share"></i> Compartilhar</button>
-                        <button type="button" class="btn btn-default btn-xs"><i class="fa fa-thumbs-o-up"></i>brindar</button>
-                        <span class="pull-right text-muted">0 brindes - 2 comentarios</span>
+                        @include('laravelLikeComment::like', ['like_item_id' => $post->id])
                       </div>
                       <!-- /.box-body -->
                       <div class="box-footer box-comments">
-                        <div class="box-comment">
-                          <!-- User image -->
-                          <img class="img-circle img-sm" src="{{$reg->avatar}}" alt="User Image">
-          
-                          <div class="comment-text">
-                                <span class="username">
-                                  {{$reg->nome}}
-                                  <span class="text-muted pull-right">{{date_format($reg->created_at, 'd/m/Y')}} às {{date_format($reg->created_at, 'H:i')}}</span>
-                                </span><!-- /.username -->
-                            Exemplo de comentario.
-                          </div>
-                          <!-- /.comment-text -->
-                        </div>
-                        <!-- /.box-comment -->
-                        <div class="box-comment">
-                          <!-- User image -->
-                          <img class="img-circle img-sm" src="{{$reg->avatar}}" alt="User Image">
-          
-                          <div class="comment-text">
-                                <span class="username">
-                                  {{$reg->nome}}
-                                  <span class="text-muted pull-right"{{date_format($reg->created_at, 'd/m/Y')}} às {{date_format($reg->created_at, 'H:i')}}</span>
-                                </span><!-- /.username -->
-                                Exemplo de comentario 2.
-                          </div>
-                          <!-- /.comment-text -->
-                        </div>
+                          @include('laravelLikeComment::comment', ['comment_item_id' => $post->id])
+                                              
                         <!-- /.box-comment -->
                       </div>
                       <!-- /.box-footer -->
-                      <div class="box-footer">
-                        <form action="#" method="post">
-                          <img class="img-responsive img-circle img-sm" src="{{$reg->user->avatar}}" alt="Alt Text">
-                          <!-- .img-push is used to add margin to elements next to floating images -->
-                          <div class="img-push">
-                            <input type="text" class="form-control input-sm" placeholder="Press enter to post comment" disabled>
-                          </div>
-                        </form>
-                      </div>
+                      
                       <!-- /.box-footer -->
                     </div>
                     <!-- /.box -->

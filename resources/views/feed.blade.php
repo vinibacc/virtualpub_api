@@ -99,7 +99,7 @@
                       <!-- /.box-body -->
                      
                       <!-- /.box-footer -->
-                      <div class="box-footer">
+                      <div class="box-box-comments ">
                         <a class="btn btn-primary" role="button" target="_blank" href="{{route('posts.show', $post->id)}}">visualiza comentários</a>
                       </div>
                       <!-- /.box-footer -->

@@ -7,8 +7,8 @@
 @stop
 
 @section('content')
+@foreach($cerveja as $c)
 <div class="row">
-      @foreach($cerveja as $c)
       <div class="col-sm-12 col-md-4">
           <div class="box box-warning">
               <div class="box-body box-profile">
@@ -32,7 +32,6 @@
                       <li class="list-group-item">
                           <input id="input-1" name="input-1" class="rating rating-loading" data-min="0" data-max="5" data-step="0.1" value="{{ $c->averageRating }}" data-size="xs" disabled="">
                       </li>
-                  
                   </ul>
                   <ul class="list-group list-group-unbordered">
                     <li class="list-group-item text-center">
@@ -55,8 +54,8 @@
               </div>
           </div>
       </div>
-      @endforeach
-</div>
+    </div>
+    @endforeach
 @foreach($posts as $post)
     <div class="row">
             <div class="col-md-6">

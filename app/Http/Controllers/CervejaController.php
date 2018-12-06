@@ -175,9 +175,9 @@ class CervejaController extends Controller
     {
         $this->validate($request, [
             'nome' => 'required|unique:cervejas,nome,'.$id.'|min:3|max:100',
-            'IBU' => 'required|numeric|min:0|max:60',
-            'ABV' => 'required|numeric|min:0|max:60',
-            'EBC' => 'required|numeric|min:0|max:90',
+            'IBU' => 'required|numeric',
+            'ABV' => 'required|numeric',
+            'EBC' => 'required|numeric',
             'SRM' => 'required',
             'descricao' => 'required'
 

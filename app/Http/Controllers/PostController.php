@@ -201,7 +201,7 @@ class PostController extends Controller
         ->orderBy('data', 'desc')
         ->get();
 
-        $cerveja = Cerveja::where('ativo', 1)->inRandomOrder()->get();
+        $cerveja = Cerveja::where('ativo', 1)->inRandomOrder()->limit(1)->get();
            
         return view('feed', compact('posts','cerveja'));
     }

@@ -59,7 +59,7 @@
 @endforeach
 </div>
 
-<div class="col-sm-12 col-md-3">
+<div class="col-sm-12 col-md-4">
     <h3>Recomendação</h3>
         @foreach($cerveja as $c)
         <div class="col-sm-12">

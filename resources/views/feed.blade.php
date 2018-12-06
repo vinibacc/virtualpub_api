@@ -87,14 +87,7 @@
                         <b>Unidade Internacional de Amargor</b> <a class="pull-right">{{$c->IBU}}</a>
                       </li>
                     </ul>
-                    <p>Unidades de Referência de Coloração</p>
                     <ul class="list-group list-group-unbordered">
-                      <li class="list-group-item">
-                         <b>Método Padrão de Referência</b> <a class="pull-right">{{$c->SRM}}</a>
-                      </li>
-                      <li class="list-group-item">
-                        <b>Convenção Europeia de Cervejaria (EBC)</b> <a class="pull-right">{{$c->EBC}}</a>
-                      </li>
                       <li class="list-group-item text-center">
                         <a type="button" href="{{ route('cervejas.show', $c->id)}}" class="btn btn-success centered">Mais Informações</a>
                       </li>

@@ -120,22 +120,22 @@
                     <div class="row col-sm-12">
                     <div class="form-group col-sm-3">
                         <label for="IBU">IBU:</label>
-                        <input type="number" class="form-control" id="IBU" name="IBU" value="{{$reg->IBU or old('IBU')}}" required>
+                        <input type="text" class="form-control" id="IBU" name="IBU" value="{{$reg->IBU or old('IBU')}}" required>
                     </div>
     
                     <div class="form-group col-sm-3">
                         <label for="ABV">ABV:</label>
-                        <input type="number" class="form-control" id="ABV" name="ABV" value="{{$reg->ABV or old('ABV')}}" required>
+                        <input type="text" class="form-control" id="ABV" name="ABV" value="{{$reg->ABV or old('ABV')}}" required>
                     </div>
     
                     <div class="form-group col-sm-3">
                         <label for="SRM">SRM:</label>
-                        <input type="number" class="form-control" id="SRM"  name="SRM"  value="{{$reg->SRM or old('SRM')}}" required>
+                        <input type="text" class="form-control" id="SRM"  name="SRM"  value="{{$reg->SRM or old('SRM')}}" required>
                     </div>
                 
                     <div class="form-group col-sm-3">
                         <label for="EBC">EBC:</label>
-                        <input type="number" class="form-control" id="EBC" name="EBC" value="{{$reg->EBC or old('EBC')}}" required>
+                        <input type="text" class="form-control" id="EBC" name="EBC" value="{{$reg->EBC or old('EBC')}}" required>
                     </div>
                 </div>
                     <div class="form-group col-sm-12">

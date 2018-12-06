@@ -227,7 +227,7 @@ class CervejaController extends Controller
 
     public function webServiceId($id = null) {
         //indica o tipo de retorno do metodo
-        //header("content-type: application/json; charset=utf-8");
+        header("content-type: application/json; charset=utf-8");
         if ($id == null) {
             $retorno = array(
                 "situacao" => "erro");
@@ -262,9 +262,9 @@ class CervejaController extends Controller
                     }
                 }
                 //converte array para o formato JSON
-                return dd($retorno);
+                //return dd($retorno);
  
-        //echo json_encode($retorno, JSON_PRETTY_PRINT);
+                echo json_encode($retorno, JSON_PRETTY_PRINT);
         
      
     }

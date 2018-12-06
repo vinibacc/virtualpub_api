@@ -254,7 +254,7 @@ class CervejaController extends Controller
                     "cor" => $reg->color->nome,
                     "cor_hex" => $reg->color->hex,
                     "fabricante" => $reg->fabricante->fabricante_name,
-                    "avaliacao" => $r,
+                    "avaliacao" => intval($r),
                     "favoritada" => $reg->favoritadas()->count());
                 } else {
                     $retorno = array(

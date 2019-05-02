@@ -58,7 +58,7 @@
                         </div>
                         @can('isFabricante')
                         <div class="form-group col-sm-12">
-                            <input type="hidden" class="form-control" id="fabricante_id" name="fabricante_id" value="{{$fabricante->id or old('fabricante_id')}}"required>
+                            <input type="hidden" class="form-control" id="user_id" name="user_id" value="{{$fabricante->id or old('user_id')}}"required>
                         </div>
                         @endcan
                     </div>
@@ -99,11 +99,11 @@
                     <div class="row">
                     @can('isMantenedor')
                         <div class="form-group col-sm-12">
-                            <label for="fabricante_id">fabricante:</label>
-                            <select class="form-control select2" style="whidth: 100%;" id="fabricante_id" name="fabricante_id">
+                            <label for="user_id">fabricante:</label>
+                            <select class="form-control select2" style="whidth: 100%;" id="user_id" name="user_id">
                                 @foreach ($fabricantes as $fabricante) 
                                     <option value="{{$fabricante->id}}" 
-                                        @if ((isset($reg) && $reg->fabricante_id==$fabricante->id) or old('fabricante_id') == $fabricante->id)
+                                        @if ((isset($reg) && $reg->user_id==$fabricante->id) or old('user_id') == $fabricante->id)
                                          selected
                                          @endif>
                                         {{$fabricante->fabricante_name}}

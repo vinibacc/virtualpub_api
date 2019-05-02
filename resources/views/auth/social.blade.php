@@ -17,11 +17,11 @@
         <!-- /.login-logo -->
         <div class="login-box-body">
             <p class="login-box-msg">{{ trans('adminlte::adminlte.login_message') }}</p>
-            <a href="{{ route('social.oauth', 'google') }}" class="btn btn-block btn-social btn-google">
+            <!--<a href="" class="btn btn-block btn-social btn-google" disable>
                 <span class="fa fa-google"></span>
                 Login com Google
             </a>
-            <hr>
+            <hr>-->
             <a href="{{ route('login') }}" class="btn btn-block btn-social btn-default">
                 <span class="fa fa-envelope"></span>
                 Login com Email

@@ -14,11 +14,11 @@ class AddFabricanteToCervejasTable extends Migration
     public function up()
     {
         Schema::table('cervejas', function (Blueprint $table) {
-            $table->Integer('fabricante_id')->unsigned();
+            $table->Integer('user_id')->unsigned();
 
-            $table->foreign('fabricante_id')
+            $table->foreign('user_id')
                     ->references('id')->on('users')
-                    ->onDelete('restrict');
+                    ->onDelete('cascade');
         });
     }
 

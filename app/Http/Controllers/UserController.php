@@ -65,7 +65,7 @@ class UserController extends Controller
             # code...
             $reg = User::find($id);
             $posts = Post::where('user_id', $id)->get();
-            $cervejas = Cerveja::where('fabricante_id', $id)->get();
+            $cervejas = Cerveja::where('user_id', $id)->get();
             $seguidores = DB::table('amizades')->where('seguidor_id', $id)->get();
             $seguindo = DB::table('amizades')->where('user_id', $id)->get();
             return view('users.profile', compact('reg', 'posts', 'cervejas', 'seguidores', 'seguindo'));

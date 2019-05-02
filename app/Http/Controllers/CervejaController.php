@@ -29,7 +29,7 @@ class CervejaController extends Controller
                 return view('cervejas.cervejas_list', compact('cervejas', 'estilos'));
             }else if(Gate::allows('isFabricante')){
                 $id = Auth::user()->id;
-                $cervejas = Cerveja::where('fabricante_id', $id)->paginate(5);
+                $cervejas = Cerveja::where('user_id', $id)->paginate(5);
                 $estilos = Estilo::orderBy('nome')->get();
                 return view('cervejas.cervejas_list', compact('cervejas', 'estilos'));
             }else if(Gate::allows('isUser')){
@@ -149,7 +149,7 @@ class CervejaController extends Controller
                 }
 
             }else if(Gate::allows('isFabricante')){
-                $reg = Cerveja::where('fabricante_id', Auth::user()->id)->find($id);
+                $reg = Cerveja::where('user_id', Auth::user()->id)->find($id);
                 $copos = Copo::orderBy('nome')->get();
                 $estilos = Estilo::orderBy('nome')->get();
                 $colors = Color::orderBy('nome')->get();
@@ -279,7 +279,7 @@ class CervejaController extends Controller
                 $colors = Color::orderBy('nome')->get();
                 return view('cervejas.cervejas_foto', compact('reg', 'copos', 'estilos', 'colors'));
             }else if(Gate::allows('isFabricante')){
-                $reg = Cerveja::where('fabricante_id', Auth::user()->id)->find($id);
+                $reg = Cerveja::where('user_id', Auth::user()->id)->find($id);
                 $copos = Copo::orderBy('nome')->get();
                 $estilos = Estilo::orderBy('nome')->get();
                 $colors = Color::orderBy('nome')->get();

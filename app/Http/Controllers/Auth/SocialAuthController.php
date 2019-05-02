@@ -136,7 +136,7 @@ class SocialAuthController extends Controller
                 'password' => ''
             ]);
 
-            Mail::to($providerUser->getEmail())->send(new Registro());
+            
 
 
             
